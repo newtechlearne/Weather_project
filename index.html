@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weather Forecast Application">
+    <title>Weather Forecast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-gray-800 bg-gray-100">
+    <header class="p-6 text-center text-white bg-blue-500">
+        <h1 class="text-2xl font-bold">Weather Forecast Application</h1>
+        <p class="text-sm">Get real-time weather updates for your location or any city.</p>
+    </header>
+
+    <main class="max-w-4xl p-6 mx-auto">
+        <!-- Search Section -->
+        <section id="search-section" class="mb-6">
+            <div class="flex items-center gap-4">
+                <input
+                    type="text"
+                    id="cityInput"
+                    class="w-full p-2 border border-gray-300 rounded"
+                    placeholder="Enter city name"
+                />
+                <button id="searchBtn" class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">
+                    Search
+                </button>
+                <button id="currentLocationBtn" class="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600">
+                    Use My Location
+                </button>
+            </div>
+            <select
+                id="recentCitiesDropdown"
+                class="hidden w-full p-2 mt-4 border border-gray-300 rounded"
+            >
+                <option value="">Recently Searched Cities</option>
+            </select>
+        </section>
+
+        <!-- Current Weather Section -->
+        <section id="current-weather" class="hidden p-4 mb-6 bg-white rounded shadow">
+            <h2 class="mb-4 text-xl font-bold">Current Weather</h2>
+            <div id="weatherDetails" class="flex flex-col items-center">
+                <!-- Dynamic Content -->
+            </div>
+        </section>
+
+        <!-- Extended Forecast Section -->
+        <section id="extended-forecast" class="hidden p-4 bg-white rounded shadow">
+            <h2 class="mb-4 text-xl font-bold">5-Day Forecast</h2>
+            <div id="forecastContainer" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+                <!-- Dynamic Content -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="p-4 text-center text-white bg-gray-800">
+        <p>Powered by OpenWeatherMap API</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
